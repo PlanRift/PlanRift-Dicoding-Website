@@ -59,7 +59,7 @@ a {
 h2 {
   /* biar ga scroll kanan kiri */
   word-wrap: normal;
-  /* font-size: 2rem; */
+  font-size: 3rem;
   line-height: 1.5em;
 }
 
@@ -288,14 +288,14 @@ header {
 }
 
 .benefits__header {
-  position: absolute;
-  align-items: center ;
-  margin-left: 170px;
-  font-size:80px;
+  align-items: center;
+  margin-left: 3rem;
+  padding: 4rem;
+  font-size: 5rem;
   letter-spacing:1px;
   margin-top: -5rem;
   font-style: italic;
-  
+  width: 95%;
 }
 
 .benefits__header2 {
@@ -337,12 +337,37 @@ header {
   color: #F1BD48;
 }
 .benefits__container {
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
   justify-content: right;
   display: grid;
   gap: 3rem;
 }
 
+
+.benefit__cols{
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .benefit__cols{
+    float: left;
+    width: 70%;
+  }
+  .right{
+    float: right;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .benefit__cols{
+    float: left;
+    width: 70%;
+  }
+  .right{
+    float: right;
+  }
+}
 .benefits__row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -542,42 +567,39 @@ aside {
 
 /* footer */
 .footer {
-  display: grid;
-  place-content: center;
+  display:grid;
   padding: 1rem 0rem;
   gap: 1rem;
   background-color: var(--color-secondary);
-  line-height: 2rem;
   font-family: Gruppo;
   font-weight: light ;
+  letter-spacing: 5px;
+  justify-content: center;
+}
+.footer__header {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin-bottom: 5px;
+}
+
+.footer__text {
+  font-size: 10px;
+  text-align: center ;
+  line-height: 10px;
 }
 
 .footer__container {
-  display: grid;
+  display: flex;
   font-weight: bold;
-  /* gap: 2rem; */
-  gap: 27rem;
-  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  line-height: 2rem;
 }
-
-.footer__right {
-  margin-left: auto;
-}
-
-@media screen and (max-width: 768px) {
-  .footer__container {
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .footer__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.socials {
+  list-style: none;
+  display: flex;
+  letter-spacing: 5px;
 }
 /* end footer */
